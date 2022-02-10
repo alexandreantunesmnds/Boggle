@@ -1,7 +1,7 @@
 package boggle.model;
 
 import java.util.Random;
-
+//test
 public class Boggle  {
 
     private static char[] voyelles = {'A', 'E', 'I', 'O', 'U', 'Y'};

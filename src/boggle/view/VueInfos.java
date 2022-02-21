@@ -1,19 +1,19 @@
 package boggle.view;
 
-import boggle.model.Boggle;
 import boggle.Observateur;
+import boggle.model.Boggle;
+import javafx.scene.control.Label;
 import javafx.scene.layout.TilePane;
-
-import java.awt.*;
 
 public class VueInfos extends TilePane implements Observateur {
     private Label score, motChoisi ;
     private Boggle bog ;
     public VueInfos(Boggle bog) {
         this.bog = bog ;
-        this.score = new Label(String.valueOf(this.bog.getScore()));
-        this.motChoisi = new Label(this.bog.getMotChoisi());
+        this.motChoisi = new Label("Mot choisi : " + this.bog.getMotChoisi());
+        this.score = new Label("Score : " + this.bog.getScore());
         this.bog.ajouterObservateur(this) ;
+        this.getChildren().addAll(score,motChoisi);
     }
 
     @Override

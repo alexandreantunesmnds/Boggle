@@ -1,7 +1,7 @@
-package view;
+package boggle.view;
 
 import boggle.model.Boggle;
-import boggle.model.Observateur;
+import boggle.Observateur;
 import javafx.scene.layout.TilePane;
 
 import java.awt.*;

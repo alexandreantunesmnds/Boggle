@@ -1,5 +1,7 @@
 package boggle.model;
 
+import boggle.Observateur;
+
 import java.util.ArrayList;
 import java.util.Random;
 //test

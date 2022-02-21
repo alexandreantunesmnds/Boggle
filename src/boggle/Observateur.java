@@ -1,4 +1,4 @@
-package boggle.model;
+package boggle;
 public interface Observateur {
     public void reagir();
 

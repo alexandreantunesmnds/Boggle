@@ -9,7 +9,6 @@ public class VueInfos extends TilePane implements Observateur {
     private Label score, motChoisi ;
     private Boggle bog ;
     public VueInfos(Boggle bog) {
-        super();
         this.bog = bog ;
         this.motChoisi = new Label("Mot choisi : " + this.bog.getMotChoisi());
         this.score = new Label("Score : " + this.bog.getScore());

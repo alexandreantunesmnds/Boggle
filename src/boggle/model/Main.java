@@ -1,5 +1,6 @@
 package boggle.model;
 
+import boggle.view.PanneauControle;
 import boggle.view.VueInfos;
 import boggle.view.VueLettres;
 import javafx.application.Application;
@@ -14,7 +15,7 @@ public class Main extends Application{
         BorderPane root = new BorderPane() ;
         root.setBottom(new VueInfos(bog));
         root.setCenter(new VueLettres(bog)); ;
-        //root.setRight(new PanneauControle(bog)) ;
+        root.setRight(new PanneauControle(bog)) ;
         primaryStage.setTitle("Boggle");
         primaryStage.setScene(new Scene(root, 1000, 700));
         primaryStage.show();

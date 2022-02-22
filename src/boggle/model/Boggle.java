@@ -100,6 +100,7 @@ public class Boggle  {
         this.mot = new StringBuilder("");
         this.ligneChoisie = -1 ;
         this.colonneChoisie = -1 ;
+        this.notifierObservateurs();
     }
 
 
@@ -114,6 +115,7 @@ public class Boggle  {
             this.mot.append(this.getLettre(lig, col));
             this.ligneChoisie = lig;
             this.colonneChoisie = col;
+            this.notifierObservateurs();
         }
     }
     public void ajouterObservateur(Observateur o) {

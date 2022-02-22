@@ -19,7 +19,7 @@ public class EcouteurLettre implements EventHandler <ActionEvent> {
     }
     @Override
     public void handle(ActionEvent e) {
-        System.out.println("Lettre choisie : " + this.button.getText());
+        //System.out.println("Lettre choisie : " + this.button.getText());
         this.bog.ajouterLettre(this.lig,this.col);
     }
 }

@@ -14,10 +14,12 @@ public class VueInfos extends TilePane implements Observateur {
         this.score = new Label("Score : " + this.bog.getScore());
         this.bog.ajouterObservateur(this) ;
         this.getChildren().addAll(score,motChoisi);
+        this.reagir();
     }
 
     @Override
     public void reagir() {
+        this.motChoisi.setText(this.bog.getMotChoisi());
 
     }
 }

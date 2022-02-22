@@ -22,7 +22,7 @@ public class VueLettres extends GridPane implements Observateur {
         for(int ligne = 0; ligne < nbLettres; ligne++){
             for(int colonne = 0; colonne < nbLettres; colonne++) {
                 this.tabBouton[ligne][colonne] = new Button(String.valueOf(this.bog.getLettre(ligne,colonne)));
-                //this.tabBouton[ligne][colonne].setOnAction(new EcouteurLettre(this.bog,this.tabBouton[ligne][colonne],ligne, colonne));
+                this.tabBouton[ligne][colonne].setOnAction(new EcouteurLettre(this.bog,this.tabBouton[ligne][colonne],ligne, colonne));
                 this.add(this.tabBouton[ligne][colonne],ligne,colonne);
 
                 //Configuration de la taille et de la couleur des boutons

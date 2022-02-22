@@ -19,7 +19,8 @@ public class VueInfos extends TilePane implements Observateur {
 
     @Override
     public void reagir() {
-        this.motChoisi.setText(this.bog.getMotChoisi());
+        this.motChoisi.setText("Mot choisi : "+ this.bog.getMotChoisi());
+        this.score.setText("Score : " + this.bog.getScore());
 
     }
 }

@@ -16,7 +16,8 @@ public class PanneauControle extends VBox implements Observateur {
         this.valider = new Button("Valider");
         this.effacer = new Button("Effacer");
         this.quitter = new Button("Quitter");
-        this.quitter.setOnAction(new EcouteurQuitter());
+        this.quitter.setOnAction(new EcouteurQuitter(this.bog));
+        this.valider.setOnAction(new EcouteurValider(this.bog));
         this.bog.ajouterObservateur(this) ;
         this.getChildren().addAll(this.valider, this.effacer, this.quitter) ;
     }

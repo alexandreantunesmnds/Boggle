@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 public class Main extends Application{
     @Override
     public void start (Stage primaryStage) {
-        Boggle bog = new Boggle(20) ;
+        Boggle bog = new Boggle(4) ;
         BorderPane root = new BorderPane() ;
         root.setBottom(new VueInfos(bog));
         root.setCenter(new VueLettres(bog)); ;

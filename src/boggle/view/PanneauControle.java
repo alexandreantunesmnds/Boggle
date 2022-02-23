@@ -18,12 +18,12 @@ public class PanneauControle extends VBox implements Observateur {
         this.quitter = new Button("Quitter");
         this.quitter.setOnAction(new EcouteurQuitter(this.bog));
         this.valider.setOnAction(new EcouteurValider(this.bog));
+        this.effacer.setOnAction(new EcouteurEffacer(this.bog));
         this.bog.ajouterObservateur(this) ;
         this.getChildren().addAll(this.valider, this.effacer, this.quitter) ;
     }
 
     @Override
     public void reagir() {
-
     }
 }

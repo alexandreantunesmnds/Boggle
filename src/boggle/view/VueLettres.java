@@ -5,6 +5,7 @@ import boggle.model.Boggle;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.layout.GridPane;
+import javafx.scene.text.Font;
 
 public class VueLettres extends GridPane implements Observateur {
 
@@ -26,13 +27,13 @@ public class VueLettres extends GridPane implements Observateur {
                 this.add(this.tabBouton[ligne][colonne],ligne,colonne);
 
                 //Configuration de la taille et de la couleur des boutons
-                //this.tabBouton[ligne][colonne].setMinSize(80,80);
-                //this.tabBouton[ligne][colonne].setStyle("-fx-background-color: white; -fx-border-color: orange; -fx-border-width: 2");
-                //this.tabBouton[ligne][colonne].setFont(new Font(20));
+                this.tabBouton[ligne][colonne].setMinSize(80,80);
+                this.tabBouton[ligne][colonne].setStyle("-fx-background-color: white; -fx-border-color: orange; -fx-border-width: 2");
+                this.tabBouton[ligne][colonne].setFont(new Font(20));
             }
         }
 
-        //this.setStyle("-fx-background-color: blue");
+        this.setStyle("-fx-background-color: blue");
 
         this.bog.ajouterObservateur(this);
     }

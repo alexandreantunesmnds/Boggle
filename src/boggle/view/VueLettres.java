@@ -6,6 +6,7 @@ import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 
 public class VueLettres extends GridPane implements Observateur {
 
@@ -19,7 +20,7 @@ public class VueLettres extends GridPane implements Observateur {
 
         this.setAlignment(Pos.CENTER);
         this.tabBouton = new Button[nbLettres][nbLettres];
-
+        Font font = Font.font("Verdana", FontWeight.EXTRA_BOLD, 25);
         for(int ligne = 0; ligne < nbLettres; ligne++){
             for(int colonne = 0; colonne < nbLettres; colonne++) {
                 this.tabBouton[ligne][colonne] = new Button(String.valueOf(this.bog.getLettre(ligne,colonne)));
@@ -29,11 +30,11 @@ public class VueLettres extends GridPane implements Observateur {
                 //Configuration de la taille et de la couleur des boutons
                 this.tabBouton[ligne][colonne].setMinSize(80,80);
                 this.tabBouton[ligne][colonne].setStyle("-fx-background-color: white; -fx-border-color: orange; -fx-border-width: 2");
-                this.tabBouton[ligne][colonne].setFont(new Font(20));
+                this.tabBouton[ligne][colonne].setFont(font);
             }
         }
 
-        this.setStyle("-fx-background-color: blue");
+        this.setStyle("-fx-background-color: white");
 
         this.bog.ajouterObservateur(this);
     }

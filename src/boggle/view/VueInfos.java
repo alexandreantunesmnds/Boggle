@@ -2,6 +2,7 @@ package boggle.view;
 
 import boggle.Observateur;
 import boggle.model.Boggle;
+import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.layout.TilePane;
 import javafx.scene.text.Font;
@@ -19,6 +20,7 @@ public class VueInfos extends TilePane implements Observateur {
         this.getChildren().addAll(score,motChoisi);
         this.reagir();
         this.setStyle("-fx-background-color: white");
+        this.setAlignment(Pos.CENTER);
         // create a font
         Font font = Font.font("Verdana", FontWeight.EXTRA_BOLD, 25);
         this.score.setFont(font);

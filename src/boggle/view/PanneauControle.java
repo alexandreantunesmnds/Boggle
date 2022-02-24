@@ -2,6 +2,7 @@ package boggle.view;
 
 import boggle.Observateur;
 import boggle.model.Boggle;
+import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
@@ -25,6 +26,8 @@ public class PanneauControle extends VBox implements Observateur {
         this.valider.setStyle("-fx-background-color: white; -fx-border-color: orange; -fx-border-width: 1");
         this.effacer.setStyle("-fx-background-color: white; -fx-border-color: orange; -fx-border-width: 1");
         this.quitter.setStyle("-fx-background-color: white; -fx-border-color: orange; -fx-border-width: 1");
+        this.setAlignment(Pos.CENTER_RIGHT);
+        this.setStyle("-fx-background-color: white");
         this.valider.setFont(font);
         this.effacer.setFont(font);
         this.quitter.setFont(font);

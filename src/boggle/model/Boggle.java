@@ -7,6 +7,7 @@ import java.util.Random;
 //test
 public class Boggle  {
     private ArrayList<Observateur> obs = new ArrayList<>(10);
+    private ArrayList<String> mots = new ArrayList<>(10);
     private static char[] voyelles = {'A', 'E', 'I', 'O', 'U', 'Y'};
     private static char[] consonnes = {'B', 'C', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'X', 'Z'};
     private char[][] lettres;
@@ -124,6 +125,14 @@ public class Boggle  {
     public void notifierObservateurs() {
         for (Observateur o : this.obs) o.reagir() ;
     }
-
+    public void setDernierMot (){
+        this.mots.add(getMotChoisi());
+    }
+    public ArrayList<String> getMots() {
+        return this.mots;
+    }
+    public int getNbMots(){
+        return this.mots.size();
+    }
 
 }

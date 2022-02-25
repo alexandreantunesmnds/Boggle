@@ -29,7 +29,7 @@ public class VueLettres extends GridPane implements Observateur {
 
                 //Configuration de la taille et de la couleur des boutons
                 this.tabBouton[ligne][colonne].setMinSize(80,80);
-                this.tabBouton[ligne][colonne].setStyle("-fx-background-color: white; -fx-border-color: orange; -fx-border-width: 2");
+                this.tabBouton[ligne][colonne].setStyle("-fx-background-color: white; -fx-border-color: black; -fx-border-width: 2");
                 this.tabBouton[ligne][colonne].setFont(font);
             }
         }

@@ -21,6 +21,7 @@ public class VueInfos extends TilePane implements Observateur {
         this.reagir();
         this.setStyle("-fx-background-color: white");
         this.setAlignment(Pos.CENTER);
+        this.setMinHeight(50);
         // create a font
         Font font = Font.font("Verdana", FontWeight.EXTRA_BOLD, 25);
         this.score.setFont(font);

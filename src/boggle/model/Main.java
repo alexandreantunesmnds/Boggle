@@ -17,7 +17,7 @@ public class Main extends Application{
         VueMenu menu = new VueMenu(bog);
         bog.setDernierMot();
         BorderPane root = new BorderPane() ;
-        root.setTop(menu.getMenu());
+        root.setTop(menu.getMenu()); //essai git
         root.setBottom(new VueInfos(bog));
         root.setCenter(new VueLettres(bog));
         root.setRight(new PanneauControle(bog));

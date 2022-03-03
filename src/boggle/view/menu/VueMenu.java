@@ -16,22 +16,22 @@ public class VueMenu extends VBox implements Observateur {
         // Create MenuBar
         this.menuBar = new MenuBar();
         // Create menus
-        Menu fileMenu = new Menu("File");
-        Menu editMenu = new Menu("Edit");
-        Menu helpMenu = new Menu("Help");
-        menuBar.getMenus().addAll(fileMenu, editMenu, helpMenu);
+        Menu fileMenu = new Menu("Partie");
+        Menu editMenu = new Menu("Grille");
+        menuBar.getMenus().addAll(fileMenu, editMenu);
 
         // Create MenuItems
-        MenuItem newItem = new MenuItem("New");
-        MenuItem openFileItem = new MenuItem("Open File");
-        MenuItem exitItem = new MenuItem("Exit");
+        MenuItem saveParty = new MenuItem("Sauvegarder la partie");
+        MenuItem openParty = new MenuItem("Reprendre la partie");
+        MenuItem newParty = new MenuItem("Nouvelle partie");
 
-        MenuItem copyItem = new MenuItem("Copy");
-        MenuItem pasteItem = new MenuItem("Paste");
+        MenuItem grilleHuit = new MenuItem("8x8");
+        MenuItem grilleSix = new MenuItem("6x6");
+        MenuItem grilleQuatre = new MenuItem("4x4");
 
         // Add menuItems to the Menus
-        fileMenu.getItems().addAll(newItem, openFileItem, exitItem);
-        editMenu.getItems().addAll(copyItem, pasteItem);
+        fileMenu.getItems().addAll(saveParty, openParty, newParty);
+        editMenu.getItems().addAll(grilleHuit, grilleSix, grilleQuatre);
         this.bog.ajouterObservateur(this);
     }
 
